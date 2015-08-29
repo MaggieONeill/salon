@@ -20,4 +20,20 @@ public class ClientTest{
      assertEquals(Client.all().size(), 1);
    }
 
+
+
+
+   @Test
+ public void equals_overrideIfClientInformationIsDuplicated_true() {
+   Client newClient = new Client("Megan", 1);
+   Client oldClient = new Client("Megan", 1);
+   assertTrue(newClient.equals(oldClient));
+ }
+   //
+  //  @Test
+  //  public void getNameReturnsName(){
+  //    Client client = new Client("Megan", 1);
+  //    assertEquals("Megan", client.getClientName());
+  //  }
+
  }
