@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="AppTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2015-08-30T02:11:48" hostname="epicodus-11.local" time="0.0">
+<testsuite name="AppTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2015-08-30T02:40:23" hostname="epicodus-11.local" time="0.0">
   <properties/>
   <testcase name="classMethod" classname="AppTest" time="0.0">
     <failure message="java.lang.NoSuchMethodError: App.main([Ljava/lang/String;)V" type="java.lang.NoSuchMethodError">java.lang.NoSuchMethodError: App.main([Ljava/lang/String;)V
-	at ServerRule.before(ServerRule.java:7)
+	at ServerRule.before(ServerRule.java:8)
 	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:46)
 	at org.junit.rules.RunRules.evaluate(RunRules.java:20)
 	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)

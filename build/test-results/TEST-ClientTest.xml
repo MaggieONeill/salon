@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="ClientTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-08-30T02:11:48" hostname="epicodus-11.local" time="0.196">
+<testsuite name="ClientTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2015-08-30T02:40:23" hostname="epicodus-11.local" time="0.162">
   <properties/>
-  <testcase name="all_returnsSavedObjects" classname="ClientTest" time="0.147"/>
+  <testcase name="all_returnsSavedObjects" classname="ClientTest" time="0.113"/>
   <testcase name="getHairdressers_id_returnsCorrectId" classname="ClientTest" time="0.005"/>
-  <testcase name="find_findsClientById" classname="ClientTest" time="0.015"/>
+  <testcase name="find_findsClientById" classname="ClientTest" time="0.016"/>
   <testcase name="all_emptyAtFirst" classname="ClientTest" time="0.008"/>
   <testcase name="save_addsClientToDatabase" classname="ClientTest" time="0.015"/>
   <testcase name="getName_returnsClients_nameMegan" classname="ClientTest" time="0.005"/>

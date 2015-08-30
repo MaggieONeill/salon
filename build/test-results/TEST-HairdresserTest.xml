@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="HairdresserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2015-08-30T02:11:48" hostname="epicodus-11.local" time="0.051">
+<testsuite name="HairdresserTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2015-08-30T02:40:23" hostname="epicodus-11.local" time="0.052">
   <properties/>
   <testcase name="update_Hairdresser" classname="HairdresserTest" time="0.02"/>
-  <testcase name="all_emptyAtFirst" classname="HairdresserTest" time="0.009"/>
-  <testcase name="getId_returnsCorrectId" classname="HairdresserTest" time="0.013"/>
+  <testcase name="all_emptyAtFirst" classname="HairdresserTest" time="0.008"/>
+  <testcase name="getId_returnsCorrectId" classname="HairdresserTest" time="0.014"/>
   <testcase name="equals_returnTrueIfTypesMatch" classname="HairdresserTest" time="0.005"/>
   <testcase name="getName_returnsName" classname="HairdresserTest" time="0.004"/>
   <system-out><![CDATA[]]></system-out>
