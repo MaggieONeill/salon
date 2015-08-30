@@ -1,0 +1,32 @@
+<!-- show list of current hairdressers and clients here -->
+
+<div class="row">
+  <h2 class="well"><center>Salon: Admin page</center></h2>
+  <h3><a href="/admin">Add clients or hairdressers</a></h3>
+
+  <div class="col-md-6">
+    <h2>Hairdressers</h2>
+    <div class="well">
+      #foreach($hairdresser in $hairdressers)
+      <h3><p>$hairdresser.getName()</p></h3>
+      <h6 class="clickable"><a href="hairdressers/$hairdresser.getId()/update">edit</a></h6>
+
+      #end
+
+    </div>
+  </div>
+
+  <div class="col-md-6">
+    <h2>Clients</h2>
+    #foreach($client in $clients)
+    <div class="well">
+      <h4><p>$client.getClientName()</p></h4>
+      <h4><p>$client.getName()</p></h4>
+      <h6 class="clickable"><a href="/$client.getHairdresserId()/clients/$client.getId()/update">edit or delete</a></h6>
+      <!--wondering if i should have made it hairdressers of hairdresserId... -->
+
+  </div>
+  #end
+
+</div>
+</div>

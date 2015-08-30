@@ -1,0 +1,42 @@
+
+<!--add stylists or clients here-->
+<div class="row main-forms">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
+
+    <h3>Add a client</h3>
+
+    <form action="/add-client" method="post">
+      <div class="form-group">
+        <label for="hairdresser_id">Select a hairdresser</label>
+        <select id="hairdresser_id" name="hairdresser_id" type="text">
+          #foreach ($hairdresser in $hairdressers)
+          <option value="$hairdresser.getId()">$hairdresser.getName()</option>
+          #end
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="client_name">Client Name</label>
+        <input id="client_name" name="client_name" type="text" class="form-control" placeholder="Megan">
+      </div>
+
+        <button type="submit" class="btn btn-success submit-client">Submit</button>
+    </form>
+
+
+    <h3>Add a hairdresser</h3>
+
+    <form action ="/add" method="post">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text">
+      </div>
+        <button type="submit" class="btn btn-success submit-stylist">Submit</button>
+    </form>
+
+
+    <h5><a href="/">Return to Admin Page</a></h5>
+  </div>
+  <div class="col-md-2"></div>
+</div>

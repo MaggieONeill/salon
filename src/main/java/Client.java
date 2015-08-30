@@ -19,7 +19,18 @@ public int getHairdressersId(){
   return hairdressers_id;
 }
 
-public Client(String clientName, int hairdressers_id) {
+public String getHairdressersName() {
+  String sql = "SELECT name FROM hairdressers WHERE id=:id";
+  try(Connection con = DB.sql2o.open()) {
+    return con.createQuery(sql)
+    .addParameter("id", hairdressers_id)
+    .executeAndFetchFirst(String.class);
+  }
+}
+
+
+
+public Client(String clients_name, int hairdressers_id) {
   this.clients_name = clients_name;
   this.hairdressers_id = hairdressers_id;
   //your original statement was "this.hairdressers_id" -you did not have the equals sign, so it did not assign it to anything.
@@ -67,7 +78,7 @@ public static List<Client> all() {
 
   public static Client find(int id) {
     try (Connection con = DB.sql2o.open()) {
-      String sql = "SELCET * FROM clients WHERE id = :id;";
+      String sql = "SELECT * FROM clients WHERE id = :id;";
       Client client = con.createQuery(sql)
                         .addParameter("id", id)
                         .executeAndFetchFirst(Client.class);
