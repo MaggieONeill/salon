@@ -10,14 +10,14 @@ SET check_function_bodies = false;
 SET client_min_messages = warning;
 
 --
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 
 
 --
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
@@ -30,7 +30,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: clients; Type: TABLE; Schema: public; Owner: sandimckendrick; Tablespace: 
+-- Name: clients; Type: TABLE; Schema: public; Owner: maggieoneill; Tablespace:
 --
 
 CREATE TABLE clients (
@@ -40,10 +40,10 @@ CREATE TABLE clients (
 );
 
 
-ALTER TABLE clients OWNER TO sandimckendrick;
+ALTER TABLE clients OWNER TO maggieoneill;
 
 --
--- Name: clients_id_seq; Type: SEQUENCE; Schema: public; Owner: sandimckendrick
+-- Name: clients_id_seq; Type: SEQUENCE; Schema: public; Owner: maggieoneill
 --
 
 CREATE SEQUENCE clients_id_seq
@@ -54,17 +54,17 @@ CREATE SEQUENCE clients_id_seq
     CACHE 1;
 
 
-ALTER TABLE clients_id_seq OWNER TO sandimckendrick;
+ALTER TABLE clients_id_seq OWNER TO maggieoneill;
 
 --
--- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sandimckendrick
+-- Name: clients_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: maggieoneill
 --
 
 ALTER SEQUENCE clients_id_seq OWNED BY clients.id;
 
 
 --
--- Name: hairdressers; Type: TABLE; Schema: public; Owner: sandimckendrick; Tablespace: 
+-- Name: hairdressers; Type: TABLE; Schema: public; Owner: sandimckendrick; Tablespace:
 --
 
 CREATE TABLE hairdressers (
@@ -74,10 +74,10 @@ CREATE TABLE hairdressers (
 );
 
 
-ALTER TABLE hairdressers OWNER TO sandimckendrick;
+ALTER TABLE hairdressers OWNER TO maggieoneill;
 
 --
--- Name: hairdressers_id_seq; Type: SEQUENCE; Schema: public; Owner: sandimckendrick
+-- Name: hairdressers_id_seq; Type: SEQUENCE; Schema: public; Owner: maggieoneill
 --
 
 CREATE SEQUENCE hairdressers_id_seq
@@ -88,31 +88,31 @@ CREATE SEQUENCE hairdressers_id_seq
     CACHE 1;
 
 
-ALTER TABLE hairdressers_id_seq OWNER TO sandimckendrick;
+ALTER TABLE hairdressers_id_seq OWNER TO maggieoneill;
 
 --
--- Name: hairdressers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: sandimckendrick
+-- Name: hairdressers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: maggieoneill
 --
 
 ALTER SEQUENCE hairdressers_id_seq OWNED BY hairdressers.id;
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: sandimckendrick
+-- Name: id; Type: DEFAULT; Schema: public; Owner: maggieoneill
 --
 
 ALTER TABLE ONLY clients ALTER COLUMN id SET DEFAULT nextval('clients_id_seq'::regclass);
 
 
 --
--- Name: id; Type: DEFAULT; Schema: public; Owner: sandimckendrick
+-- Name: id; Type: DEFAULT; Schema: public; Owner: maggieoneill
 --
 
 ALTER TABLE ONLY hairdressers ALTER COLUMN id SET DEFAULT nextval('hairdressers_id_seq'::regclass);
 
 
 --
--- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: sandimckendrick
+-- Data for Name: clients; Type: TABLE DATA; Schema: public; Owner: maggieoneill
 --
 
 COPY clients (id, clients_name, hairdressers_id) FROM stdin;
@@ -120,14 +120,14 @@ COPY clients (id, clients_name, hairdressers_id) FROM stdin;
 
 
 --
--- Name: clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sandimckendrick
+-- Name: clients_id_seq; Type: SEQUENCE SET; Schema: public; Owner: maggieoneill
 --
 
 SELECT pg_catalog.setval('clients_id_seq', 7, true);
 
 
 --
--- Data for Name: hairdressers; Type: TABLE DATA; Schema: public; Owner: sandimckendrick
+-- Data for Name: hairdressers; Type: TABLE DATA; Schema: public; Owner: maggieoneill
 --
 
 COPY hairdressers (id, name, client_id) FROM stdin;
@@ -135,14 +135,14 @@ COPY hairdressers (id, name, client_id) FROM stdin;
 
 
 --
--- Name: hairdressers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: sandimckendrick
+-- Name: hairdressers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: maggieoneill
 --
 
 SELECT pg_catalog.setval('hairdressers_id_seq', 1, false);
 
 
 --
--- Name: clients_pkey; Type: CONSTRAINT; Schema: public; Owner: sandimckendrick; Tablespace: 
+-- Name: clients_pkey; Type: CONSTRAINT; Schema: public; Owner: maggieoneill; Tablespace:
 --
 
 ALTER TABLE ONLY clients
@@ -150,7 +150,7 @@ ALTER TABLE ONLY clients
 
 
 --
--- Name: hairdressers_pkey; Type: CONSTRAINT; Schema: public; Owner: sandimckendrick; Tablespace: 
+-- Name: hairdressers_pkey; Type: CONSTRAINT; Schema: public; Owner: maggieoneill; Tablespace:
 --
 
 ALTER TABLE ONLY hairdressers
@@ -158,16 +158,15 @@ ALTER TABLE ONLY hairdressers
 
 
 --
--- Name: public; Type: ACL; Schema: -; Owner: sandimckendrick
+-- Name: public; Type: ACL; Schema: -; Owner: maggieoneill
 --
 
 REVOKE ALL ON SCHEMA public FROM PUBLIC;
-REVOKE ALL ON SCHEMA public FROM sandimckendrick;
-GRANT ALL ON SCHEMA public TO sandimckendrick;
+REVOKE ALL ON SCHEMA public FROM maggieoneill;
+GRANT ALL ON SCHEMA public TO maggieoneill;
 GRANT ALL ON SCHEMA public TO PUBLIC;
 
 
 --
 -- PostgreSQL database dump complete
 --
-
